@@ -8,11 +8,13 @@ form.addEventListener("submit" , function(event){
     event.preventDefault();
 
     //Get user's name
-    const name = document.getElementById("name").ariaValueMax;
+    const name = document.getElementById("name").value;
 
     //Display personalised message
     const message = document.getElementById("message");
-    message.textContent = `Thank you, ${name}! You have registered successfully. `;
-    
+    message.textContent = `Thank you, ${name}! You have registered. `;
+
+    //rest form
+    form.reset();
 
 });
